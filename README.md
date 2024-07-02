@@ -13,7 +13,7 @@
 | ---- | ---- | ---- |
 | 192.168.0.111 | root | 无密码 |
 
-## 固件下载:   [Releases](https://github.com/iii80/OpenWrt-Mini/releases) 
+## 固件下载:   [Releases](https://github.com/iii90/OpenWrt-Mini/releases) 
 
 目前支持x86主机，其他常用机型待添加
 
