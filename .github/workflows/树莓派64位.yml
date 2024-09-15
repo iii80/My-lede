@@ -11,7 +11,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: raspi-64.config
   DIY_P1_SH: DIY-1.sh
-  DIY_P2_SH: DIY-3.sh
+  DIY_P2_SH: DIY-2.sh
 #  SSH_ACTIONS: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
