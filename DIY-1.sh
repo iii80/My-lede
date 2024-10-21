@@ -6,8 +6,8 @@
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #临时使用 SSR+ 自用修改源
 # git clone https://github.com/iii80/helloworld.git;master package/helloworld
-#echo "src-git helloworld https://github.com/iii80/helloworld.git;master" >> "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git;master" >> "feeds.conf.default"
+echo "src-git helloworld https://github.com/iii80/helloworld.git;master" >> "feeds.conf.default"
+#echo "src-git helloworld https://github.com/fw876/helloworld.git;master" >> "feeds.conf.default"
 
 
 
