@@ -8,7 +8,9 @@
  - 集成snmp，keepalived插件，支持集群功能（无Gui管理）
  - 科学插件集成有：ShadowSocksR Plus+  PassWall  PassWall2  OpenClash
  - 插件：[ShadowSocksR Plus+](https://github.com/fw876/helloworld.git)、[PassWall](https://github.com/xiaorouji/openwrt-passwall.git)、[OpenClash](https://github.com/vernesong/OpenClash.git)
-
+ - 插件：[luci-app-easytier](https://github.com/iii80/luci-app-easytier/releases/download/untagged-4939479d22893e21b4f8/luci-app-easytier_all.ipk)、[EasyTier](https://github.com/EasyTier/EasyTier/releases)、[Lucky](https://github.com/gdy666/luci-app-lucky/releases)
+ - easytier 依赖kmod-tun``luci-lib-fs需要先在系统软件包里安装好
+   
 | 管理地址  | 默认账号 | 默认密码 |
 | ---- | ---- | ---- |
 | 192.168.0.111 | root | 无密码 |
