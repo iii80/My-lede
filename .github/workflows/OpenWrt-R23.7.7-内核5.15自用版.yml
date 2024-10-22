@@ -1,4 +1,4 @@
-name:  OpenWrt-自用版
+name:  OpenWrt-R23.7.7-内核5.15自用版
 
 on: 
   workflow_dispatch:
@@ -11,7 +11,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: OK.config
   DIY_P1_SH: DIY-1.sh
-  DIY_P2_SH: DIY-2.sh
+  DIY_P3_SH: DIY-3.sh
 #  SSH_ACTIONS: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -90,9 +90,9 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P2_SH
+        chmod +x $DIY_P3_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
 
     - name: 下载固件dL库
       id: package
@@ -160,7 +160,7 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "OpenWrt-Mini_ X86_64-自用版" >> release.txt
+        echo "OpenWrt-R23.7.7-内核5.15自用版" >> release.txt
         echo "默认地址：192.168.0.111" >> release.txt
         echo "默认密码：无密码" >> release.txt
         echo "插件清单：ShadowSocksR Plus+，PassWall，OpenClash" >> release.txt
@@ -172,7 +172,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} -自用版
+        name: ${{ env.FILE_TIME }} -内核5.15自用版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
