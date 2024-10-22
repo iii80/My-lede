@@ -70,7 +70,9 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
+        cd openwrt
+        git reset --hard b201c29fa2749a6265ebf0b80ac3a94ad34ba6e4
+        
     - name: 添加外部插件
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
