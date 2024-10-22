@@ -1,4 +1,4 @@
-name:  OpenWrt-R23.7.7-自用版
+name:  OpenWrt-R23.7.7-内核6.1自用版
 
 on: 
   workflow_dispatch:
@@ -161,7 +161,7 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "OpenWrt-Mini_ X86_64-R23.7.7-自用版" >> release.txt
+        echo "OpenWrt-Mini_ X86_64-R23.7.7-内核6.1自用版" >> release.txt
         echo "默认地址：192.168.0.111" >> release.txt
         echo "默认密码：无密码" >> release.txt
         echo "插件清单：ShadowSocksR Plus+，PassWall，OpenClash" >> release.txt
@@ -173,7 +173,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} -R23.7.7-自用版
+        name: ${{ env.FILE_TIME }} -R23.7.7-内核6.1自用版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
