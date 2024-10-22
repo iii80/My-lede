@@ -9,7 +9,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: OK.config
+  CONFIG_FILE: x86.config
   DIY_P1_SH: DIY-1.sh
   DIY_P3_SH: DIY-3.sh
 #  SSH_ACTIONS: true
@@ -151,7 +151,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt-Mini${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt-${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 创建发布标签
