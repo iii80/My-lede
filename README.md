@@ -26,3 +26,5 @@
 1、OpenWrt-R23.7.7-内核5.15自用版 为最新lean代码R23.7.7默认5.15内核集成科学插件版本
 
 2、OpenWrt-R23.7.7-内核6.1自用版 为最新lean代码R23.7.7默认6.1内核集成科学插件版本
+
+https://github.com/WukongMaster/OpenWrt-Mini
