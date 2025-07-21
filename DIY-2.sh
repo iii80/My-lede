@@ -8,7 +8,7 @@ sed -i '/^#src-git luci https:\/\/github.com\/coolsnowwolf\/luci$/s/^#//' feeds.
 #sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
 
 # 2-设置管理地址
-sed -i 's/192.168.1.1/192.168.0.111/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.0.111/g' package/base-files/luci2/bin/config_generate
 
 # 3-编译内核版本
 sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g' ./target/linux/x86/Makefile
