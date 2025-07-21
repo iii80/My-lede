@@ -1,15 +1,8 @@
 # 此脚本用处是：添加第三方插件
 #=========================================================================================================================
 
-
 # 1-添加 ShadowSocksR Plus+ 插件
-# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-#临时使用 SSR+ 自用修改源
-# git clone https://github.com/iii80/helloworld.git;master package/helloworld
-echo "src-git helloworld https://github.com/iii80/helloworld.git;master" >> "feeds.conf.default"
-#echo "src-git helloworld https://github.com/fw876/helloworld.git;master" >> "feeds.conf.default"
-
-
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # 2-添加 PowerOff 关机插件
 git clone https://github.com/WukongMaster/luci-app-poweroff.git package/luci-app-poweroff
@@ -26,7 +19,7 @@ echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-pa
 echo "src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main" >> "feeds.conf.default"
 
 # 6-添加 Lucky 插件
-git clone https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 
 # 7-添加 Easytier 插件
 git clone https://github.com/EasyTier/luci-app-easytier.git package/easytier
